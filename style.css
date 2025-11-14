@@ -1,0 +1,106 @@
+/* CV FINAL: HARI 1 + HARI 2 GABUNG — 1 FILE, 1 CV, 100% NENDANG! */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* FOTO KIRI */
+.sidebar {
+  flex: 1;
+  min-width: 250px;
+  background: #4a00e0;
+  padding: 40px;
+  text-align: center;
+}
+
+.foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.3);
+  object-fit: cover;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  margin: 0 auto;
+}
+
+/* INFO KANAN */
+.content {
+  flex: 2;
+  min-width: 300px;
+  padding: 40px;
+}
+
+h1 { color: #2c3e50; font-size: 28px; margin-bottom: 8px; }
+.tagline { color: #7f8c8d; font-style: italic; margin-bottom: 15px; }
+
+h2 {
+  color: #4a00e0;
+  margin: 25px 0 15px;
+  font-size: 22px;
+  position: relative;
+}
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #4a00e0;
+}
+
+p { margin: 10px 0; color: #555; line-height: 1.6; }
+a { color: #4a00e0; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+
+ul { list-style: none; margin-top: 10px; }
+li {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: white;
+  margin: 12px 0;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(74,0,224,0.3);
+  transition: 0.3s;
+}
+li:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(74,0,224,0.4); }
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 50px;
+  margin-top: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(74,0,224,0.4);
+  transition: 0.3s;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(74,0,224,0.5); }
+
+/* RESPONSIF HP */
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .sidebar, .content { text-align: center; padding: 25px; }
+  .foto { width: 90px; height: 90px; }
+  h1 { font-size: 24px; }
+  li { margin: 10px auto; max-width: 80%; }
+}
