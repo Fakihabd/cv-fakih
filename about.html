@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Fakih Abdul Aziz</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-section { margin: 30px 0; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .about-section h3 { color: #4a00e0; margin-bottom: 10px; }
+    .timeline { display: flex; flex-direction: column; gap: 20px; margin: 30px 0; }
+    .timeline-item { background: #f8f9fa; padding: 20px; border-radius: 15px; position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: -10px; top: 20px; width: 20px; height: 20px; background: #4a00e0; border-radius: 50%; }
+    .skill-badge { display: inline-block; background: linear-gradient(135deg, #8e2de2, #4a00e0); color: white; padding: 8px 16px; border-radius: 50px; margin: 5px; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+  <div id="loader" class="loader"><div class="spinner"></div><p>Loading About Me... 🚀</p></div>
+  <button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+
+  <div class="container" style="max-width: 900px; margin: 40px auto;">
+    <div class="content" style="padding: 40px;">
+
+      <div style="text-align: center;">
+        <img src="foto.jpg" alt="Fakih Abdul Aziz" class="foto" style="width: 180px; height: 180px; margin-bottom: 20px;"/>
+        <h1>Tentang Gue: Fakih Abdul Aziz</h1>
+        <p class="tagline" style="font-size: 18px; color: #666;">Dari Gamer Biasa Jadi Web Developer Otodidak</p>
+      </div>
+
+      <div class="about-section">
+        <h3>📚 Awal Perjalanan Gue</h3>
+        <p>Gua lahir dan besar di kota kecil di Jawa Tengah. Dulu, hari-hari gue cuma diisi main game dari pagi sampe malam. PUBG, Mobile Legends, Free Fire — itu dunia gue. Nilai sekolah? Biasa aja. Guru bilang, "Fakih ini pinter, tapi males belajar." Tapi di balik layar HP, gue penasaran: <strong>"Game ini dibikin pake apa ya?"</strong></p>
+        <p>Satu hari, gue nemu video YouTube: "Bikin Website Pertama dalam 10 Menit". Gue coba. Gagal. Coba lagi. Gagal lagi. Tapi pas `<h1>Hello World</h1>` muncul di browser... <strong>rasanya kayak menang turnamen!</strong> Dari situ, gue ketagihan. HP jadi alat belajar, bukan cuma main game.</p>
+      </div>
+
+      <div class="about-section">
+        <h3>🎓 Perjalanan Belajar Otodidak</h3>
+        <p>Gue lulus SMA Negeri [1] tahun 2025 dengan nilai pas-pasan. Tapi gue gak mau jadi "lulusan biasa". Gue mulai belajar HTML, CSS, JavaScript dari nol. Sumbernya? YouTube, FreeCodeCamp, W3Schools, dan <strong>Grok AI</strong> — temen ngobrol gue tiap malam.</p>
+        <p>Gue bikin CV interaktif ini dari nol. Awalnya cuma copy-paste, tapi sekarang gue paham tiap baris kode. Gue belajar Git, GitHub, Vercel — deploy website gratis! Sekarang, CV gue live 24/7 di internet. <strong>Siapa sangka, anak kampung bisa punya website sendiri?</strong></p>
+      </div>
+
+      <div class="about-section">
+        <h3>🛠️ Skill Gue Saat Ini</h3>
+        <div style="text-align: center;">
+          <span class="skill-badge">HTML5</span>
+          <span class="skill-badge">CSS3</span>
+          <span class="skill-badge">JavaScript Dasar</span>
+          <span class="skill-badge">Responsive Design</span>
+          <span class="skill-badge">Git & GitHub</span>
+          <span class="skill-badge">Vercel Deploy</span>
+          <span class="skill-badge">Dark Mode Toggle</span>
+          <span class="skill-badge">Formspree Integration</span>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h3>⏳ Timeline Perjalanan Gue</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>Jan 2025</strong> — Mulai belajar HTML dari YouTube
+          </div>
+          <div class="timeline-item">
+            <strong>Mar 2025</strong> — Bikin website statis pertama (CV sederhana)
+          </div>
+          <div class="timeline-item">
+            <strong>Jun 2025</strong> — Deploy ke Vercel, CV live di internet!
+          </div>
+          <div class="timeline-item">
+            <strong>Nov 2025</strong> — Tambah dark mode, form kontak, PDF download
+          </div>
+          <div class="timeline-item">
+            <strong>Des 2025</strong> — Target: Bikin game tebak angka + to-do list
+          </div>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h3>🚀 Target Gue ke Depan</h3>
+        <p>Gue pengen jadi <strong>Frontend Developer</strong> di perusahaan tech besar. Gue tau jalannya panjang, tapi gue siap. Setiap hari belajar 2 jam, bikin 1 project kecil. Gue juga pengen bikin <strong>kursus gratis ngoding buat anak kampung</strong> — biar mereka tau, <strong>gak perlu laptop mahal buat mulai ngoding</strong>.</p>
+        <p><strong>Motto gue:</strong> "Kalau orang lain bisa, gue juga bisa. Kalau orang lain gagal, gue belajar dari kegagalannya."</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="index.html" class="btn">🔙 Kembali ke CV Utama</a>
+        <a href="projects.html" class="btn" style="margin-left: 15px;">Lihat Project Gue</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
