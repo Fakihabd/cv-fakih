@@ -1,96 +1,73 @@
-/* === RESET & BASE === */
+/* RESET & BASE */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f9; color: #333; line-height: 1.6; min-height: 100vh; padding: 20px; }
-a { text-decoration: none; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; color: #333; line-height: 1.6; transition: 0.3s; }
+body.dark-mode { background: #121212; color: #eee; }
 
-/* === CONTAINER === */
-.container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
+/* CONTAINER */
+.container { display: flex; max-width: 1200px; margin: 40px auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+body.dark-mode .container { background: #1e1e1e; }
 
-/* === SIDEBAR === */
-.sidebar {
-  background: linear-gradient(135deg, #4a00e0, #8e2de2);
-  color: white;
-  padding: 40px;
-  text-align: center;
-  width: 300px;
-  min-width: 250px;
-}
-.sidebar .foto {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 5px solid rgba(255,255,255,0.3);
-  margin-bottom: 20px;
-  object-fit: cover;
-}
+/* SIDEBAR */
+.sidebar { background: linear-gradient(135deg, #4a00e0, #8e2de2); color: white; padding: 40px; text-align: center; width: 300px; }
+.sidebar .foto { width: 120px; height: 120px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.3); object-fit: cover; margin-bottom: 20px; }
 .sidebar h1 { font-size: 24px; margin-bottom: 8px; }
-.sidebar .tagline { font-size: 16px; opacity: 0.9; font-style: italic; }
-
-.sidebar .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+.sidebar .tagline { font-size: 16px; opacity: 0.9; }
+.skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
 .skill { background: white; color: #4a00e0; padding: 8px 16px; border-radius: 50px; font-size: 14px; font-weight: bold; }
 
-/* === CONTENT === */
-.content {
-  flex: 1;
-  padding: 50px 40px;
-}
-.content h2 { font-size: 28px; color: #4a00e0; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-.content p { color: #666; margin-bottom: 30px; }
-
-.content ul { list-style: none; padding: 0; }
-.content li { margin: 12px 0; padding: 14px 20px; background: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
-.content li:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-
-/* === KONTAK FORM === */
+/* CONTENT */
+.content { flex: 1; padding: 50px 40px; }
+.content h2 { font-size: 28px; color: #4a00e0; margin-bottom: 15px; }
+.content p, .content li { margin-bottom: 15px; }
+.content ul { padding-left: 20px; }
 .contact-form { background: #f8f9fa; padding: 30px; border-radius: 20px; margin: 30px 0; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 14px; margin: 12px 0; border: 1px solid #ddd; border-radius: 12px; font-size: 15px; }
-.contact-form button { background: #4a00e0; color: white; border: none; padding: 14px 30px; border-radius: 50px; cursor: pointer; font-weight: bold; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 12px; }
+.contact-form button { background: #4a00e0; color: white; border: none; padding: 14px 30px; border-radius: 50px; cursor: pointer; }
+.nav-buttons { display: flex; gap: 15px; margin-top: 30px; }
+.btn { background: #4a00e0; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; }
 
-/* === CTA BUTTONS === */
-.cta { text-align: center; margin: 40px 0; }
-.cta button { margin: 10px; }
-
-/* === BLOG SECTION === */
-.blog-section { margin-top: 50px; }
-.blog-section .post-card { background: #f8f9fa; padding: 25px; border-radius: 20px; margin: 20px 0; transition: 0.3s; }
-.blog-section .post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-.meta { color: #888; font-size: 14px; margin: 8px 0; }
-.ad-banner { text-align: center; margin: 40px 0; padding: 20px; background: #f0f8ff; border-radius: 15px; }
-.donation { text-align: center; margin: 50px 0; padding: 30px; background: linear-gradient(135deg, #fef3c7, #fbbf24); border-radius: 20px; color: #92400e; }
-.affiliate { color: #10b981; font-weight: bold; }
-
-/* === DARK MODE TOGGLE === */
-.dark-toggle { position: fixed; top: 20px; right: 20px; background: #4a00e0; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 20px; cursor: pointer; box-shadow: 0 5px 15px rgba(74,0,224,0.3); z-index: 1000; }
-
+/* DARK MODE TOGGLE */
+.dark-toggle { position: fixed; top: 20px; right: 20px; background: #4a00e0; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 1000; }
 body.dark-mode .dark-toggle { background: #eee; color: #4a00e0; }
 
-/* === LOADER === */
+/* LOADER */
 .loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #4a00e0; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; z-index: 9999; }
 .spinner { width: 60px; height: 60px; border: 6px solid rgba(255,255,255,0.3); border-top: 6px solid white; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-body.dark-mode .loader { background: #121212; }
+/* TOKO MIE FAKIH - MANTAP! */
+.resto-section { margin-top: 60px; background: #fff; }
+.resto-header { background: #4a90e2; color: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; }
+.resto-header .logo { font-size: 26px; font-weight: bold; }
+.resto-header .subtitle { font-size: 14px; margin: 0; }
+.resto-hero { text-align: center; padding: 60px 20px; background: #fff; }
+.resto-hero h1 { font-size: 40px; color: #1a1a2e; margin-bottom: 10px; }
+.resto-hero p { font-style: italic; color: #555; margin: 10px 0; }
+.resto-cta { background: #50c878; color: white; padding: 14px 35px; border: none; border-radius: 50px; font-weight: bold; font-size: 17px; cursor: pointer; margin-top: 20px; transition: 0.3s; }
+.resto-cta:hover { background: #3da66b; transform: scale(1.05); }
+.menu-grid { padding: 60px 5%; text-align: center; }
+.menu-grid h2 { font-size: 34px; color: #4a90e2; margin-bottom: 35px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+.card { background: white; border: 2px solid #e0e0e0; border-radius: 20px; padding: 25px; text-align: center; transition: 0.3s; }
+.card:hover { border-color: #4a90e2; transform: translateY(-10px); box-shadow: 0 15px 30px rgba(74,144,226,0.2); }
+.card h3 { color: #1a1a2e; font-size: 20px; margin-bottom: 8px; }
+.card p { font-weight: bold; color: #e91e63; font-size: 18px; }
+.resto-footer { background: #f8f9fa; color: #666; text-align: center; padding: 20px; font-size: 14px; border-top: 1px solid #eee; }
 
-/* === RESPONSIVE HP === */
+/* DARK MODE TOKO */
+body.dark-mode .resto-section, body.dark-mode .resto-hero { background: #1e1e1e; }
+body.dark-mode .resto-header { background: #357abd; }
+body.dark-mode .card { background: #2d2d2d; border-color: #444; color: #eee; }
+body.dark-mode .card h3 { color: #fff; }
+body.dark-mode .card p { color: #ff6b6b; }
+body.dark-mode .resto-footer { background: #121212; color: #aaa; }
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .container { flex-direction: column; margin: 0; border-radius: 0; }
-  .sidebar { width: 100%; padding: 30px 20px; }
-  .content { padding: 40px 20px; text-align: center; }
-  .foto { width: 100px; height: 100px; }
-  .nav-buttons { display: flex; flex-direction: column; gap: 15px; }
-  .nav-buttons .btn { width: 90%; margin: 0 auto; }
-  .dark-toggle { top: 15px; right: 15px; width: 40px; height: 40px; font-size: 16px; }
-  .post-card { padding: 20px; }
-  .donation { padding: 25px; }
-  .affiliate { font-size: 15px; }
+  .container { flex-direction: column; margin: 20px; border-radius: 0; }
+  .sidebar { width: 100%; padding: 30px; }
+  .content { padding: 40px 20px; }
+  .grid { grid-template-columns: 1fr; }
+  .resto-hero h1 { font-size: 32px; }
+  .dark-toggle { width: 40px; height: 40px; font-size: 16px; }
 }
