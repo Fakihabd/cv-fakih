@@ -114,3 +114,62 @@ footer {
 
 /* MAPS */
 .maps iframe { width: 100%; height: 200px; border: none; }
+/* FONT & GLOBAL */
+body { font-family: 'Poppins', sans-serif; margin: 0; background: #fffaf0; }
+.section-title { font-size: 36px; text-align: center; color: #ff3b30; margin: 50px 0 40px; position: relative; }
+.section-title::after { content: ''; width: 80px; height: 4px; background: #ff6b6b; display: block; margin: 10px auto; border-radius: 2px; }
+
+/* HEADER ANIMASI */
+.resto-header { background: linear-gradient(135deg, #ff3b30, #ff6b6b); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 99; box-shadow: 0 5px 15px rgba(255,59,48,0.3); }
+.logo { font-size: 28px; font-weight: 700; color: white; display: flex; align-items: center; gap: 10px; }
+.logo span { animation: bounce 2s infinite; }
+.resto-nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: 600; position: relative; transition: 0.3s; }
+.resto-nav a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 3px; background: white; transition: 0.3s; }
+.resto-nav a:hover::after { width: 100%; }
+
+/* HERO */
+.resto-hero { text-align: center; padding: 80px 20px; background: linear-gradient(rgba(255,59,48,0.1), transparent); }
+.resto-hero h1 { font-size: 48px; margin: 0; animation: fadeIn 1s; }
+.subtitle { font-style: italic; color: #ff3b30; font-weight: bold; font-size: 18px; }
+.level-pedas { margin: 30px 0; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; }
+.level-pedas input { width: 60%; height: 8px; border-radius: 50px; background: #ddd; outline: none; }
+.level-pedas input::-webkit-slider-thumb { background: #ff3b30; width: 25px; height: 25px; border-radius: 50%; }
+#level-text { font-weight: bold; background: linear-gradient(45deg, #ff3b30, #ff6b6b); -webkit-background-clip: text; color: transparent; }
+
+/* MENU GRID + BADGE */
+.menu-grid { padding: 60px 5%; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card { background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: 0.4s; position: relative; }
+.card:hover { transform: translateY(-15px); box-shadow: 0 25px 50px rgba(255,59,48,0.2); }
+.menu-img { width: 100%; height: 200px; object-fit: cover; transition: 0.4s; }
+.card:hover .menu-img { transform: scale(1.1); }
+.badge { position: absolute; top: 15px; right: 15px; background: #34c759; color: white; padding: 5px 12px; border-radius: 50px; font-size: 12px; font-weight: bold; }
+.card h3 { padding: 15px 10px 5px; font-size: 20px; color: #1a1a2e; }
+.price { padding: 0 10px 15px; font-weight: bold; color: #ff3b30; font-size: 22px; }
+
+/* PROMO MIE SPECIAL */
+.special-promo { padding: 80px 5%; background: linear-gradient(135deg, #fff1eb, #ffe0b3); }
+.promo-container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 35px; overflow: hidden; box-shadow: 0 25px 50px rgba(255,59,48,0.25); display: flex; align-items: center; animation: fadeIn 1s; }
+.promo-img { width: 50%; height: 350px; object-fit: cover; }
+.promo-info { padding: 50px; flex: 1; }
+.promo-info h3 { font-size: 28px; margin-bottom: 15px; }
+.old-price { text-decoration: line-through; color: #999; font-size: 20px; }
+.new-price { font-size: 36px; font-weight: bold; color: #ff3b30; margin: 8px 0; animation: pulse 1.5s infinite; }
+.desc { color: #555; margin: 20px 0; line-height: 1.6; }
+
+/* BUTTON PULSE */
+.pesan-btn, .resto-cta { background: linear-gradient(45deg, #34c759, #2ba049); color: white; border: none; padding: 14px 32px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.pesan-btn:hover, .resto-cta:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(52,199,89,0.3); }
+.pulse { animation: pulse 2s infinite; }
+
+/* ANIMASI */
+@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .promo-container { flex-direction: column; }
+  .promo-img { width: 100%; height: 250px; }
+  .resto-hero h1 { font-size: 36px; }
+}
